@@ -55,6 +55,8 @@ Below is a screenshot of the web interface showing the map. The web app successf
 
 ![burger-web-console](images/burger-web-console.png "burger-web-console")
 
+Red triangle is the robot, yellow circle is the setpoint that the robot in the controller is trying to reach.
+
 ## ROS Side (Ubuntu VM)
 
 ### Start Simulation
