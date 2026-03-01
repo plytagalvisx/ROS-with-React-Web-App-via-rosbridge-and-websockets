@@ -53,7 +53,7 @@ macOS (React Web App - Vite)
 
 Below is a screenshot of the web interface showing the map. The web app successfully receives ROS data and sends velocity commands to the robot in real-time.
 
-![burger-web-console](images/burger_web_console.png "burger_web_console")
+![burger-web-console](images/burger-web-console.png "burger-web-console")
 
 ## ROS Side (Ubuntu VM)
 
