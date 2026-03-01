@@ -30,14 +30,30 @@ macOS M1 Silicon) using:
 
 ## Architecture Overview
 
-Ubuntu VM (ROS1) ├── Gazebo ├── RViz ├── explorer.py (RRT-based
-exploration) ├── collision_avoidance.py (ORM) ├── hector_mapping ├──
-rosbridge_server (WebSocket :9090) └── Topics / Services / Actions ↓
-WebSocket macOS (React Web App) ├── roslib (npm) ├── TF tree
-reconstruction ├── Path follower controller (browser-side) └──
-Visualization canvas
+Ubuntu VM (ROS1 - Noetic)
+├── Gazebo (simulation)
+├── RViz (visualization)
+├── explorer.py (RRT-based exploration)
+├── collision_avoidance.py (ORM)
+├── hector_mapping (SLAM)
+├── rosbridge_server (WebSocket :9090)
+└── ROS Topics / Services / Actions
+│
+│ WebSocket (ws://<VM_IP>:9090)
+▼
+macOS (React Web App - Vite)
+├── roslibjs (ROS communication)
+├── TF tree reconstruction
+├── Browser-side path follower (P-controller)
+└── 2D visualization canvas
 
 ---
+
+## Results
+
+Below is a screenshot of the web interface showing the map. The web app successfully receives ROS data and sends velocity commands to the robot in real-time.
+
+![burger-web-console](images/burger_web_console.png "burger_web_console")
 
 ## ROS Side (Ubuntu VM)
 
